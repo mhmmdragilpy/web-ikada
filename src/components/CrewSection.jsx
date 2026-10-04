@@ -74,19 +74,6 @@ export default function CrewSection() {
         </div>
       </div>
 
-      {/* Production Division Split Highlight Banner */}
-      <div className="mb-8 p-4 bg-ikada-volt/10 border-l-4 border-ikada-volt border border-ikada-border flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-        <div className="text-xs font-mono text-zinc-300">
-          <span className="bg-ikada-volt text-black px-1.5 py-0.5 font-bold mr-2 uppercase">UPDATE STRUKTUR</span>
-          Divisi <strong className="text-white">Production</strong> kini terbagi dua: 
-          <strong className="text-ikada-volt"> Shooting (Paris)</strong> &amp; 
-          <strong className="text-cyan-400"> Peralatan (Teo)</strong>.
-        </div>
-        <div className="text-[11px] font-mono text-zinc-400">
-          Prinsip: Alat siap sebelum talent, footage cukup sebelum pulang.
-        </div>
-      </div>
-
       {/* Main Grid: Division Selector & Detail View */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* Left Side: Division List */}

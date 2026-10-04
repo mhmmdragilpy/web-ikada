@@ -62,7 +62,7 @@ export default function Header() {
             className="bg-ikada-volt text-black font-display font-bold text-sm sm:text-base px-6 py-3.5 uppercase tracking-wider hover:bg-white hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all duration-150 shadow-brutal-white flex items-center gap-2"
           >
             <Video className="w-4 h-4" />
-            Cek Divisi & Tim (Baru)
+            Cek Divisi & Tim
           </a>
           <a
             href="#bank-ide"
@@ -71,13 +71,6 @@ export default function Header() {
             <Sliders className="w-4 h-4 text-ikada-volt" />
             Eksplorasi Bank Ide
           </a>
-        </div>
-
-        {/* Quotes Callout */}
-        <div className="mt-12 inline-block bg-ikada-surface/80 border border-ikada-border/80 px-4 py-2.5 rounded-lg text-xs sm:text-sm text-zinc-400 font-mono">
-          <span className="text-ikada-amber font-bold">PRD UPDATE:</span> Divisi Production kini resmi dibagi: 
-          <span className="text-white font-bold mx-1">Shooting (Paris)</span> &amp; 
-          <span className="text-white font-bold mx-1">Peralatan (Teo)</span>
         </div>
       </div>
 
