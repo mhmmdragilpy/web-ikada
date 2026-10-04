@@ -26,9 +26,9 @@ Fungsinya sederhana:
 
 IKADA adalah project konten berbasis tongkrongan yang mengangkat kehidupan sehari-hari, masyarakat, kebersamaan, hiburan, pengalaman, olahraga, pendidikan, musik, review, challenge, dan berbagai cerita yang dekat dengan lingkungan kita.
 
-Project ini dibangun dari aktivitas dan interaksi yang sudah ada di tongkrongan, lalu dikembangkan menjadi konten yang bisa dinikmati lebih luas.
+Project ini dibangun dari aktivitas dan interaksi nyata di tongkrongan, lalu dikembangkan menjadi konten yang bisa dinikmati lebih luas.
 
-Fokus utama IKADA adalah **membangun project konten yang konsisten dan punya karakter**, bukan sekadar membuat video sebanyak-banyaknya.
+Fokus utama IKADA adalah **menghibur dan menjadi wadah bagi anak-anak IKADA untuk berkembang serta menemukan potensi terbaik dirinya**. Jaman sekarang kalau cuma nongkrong tanpa ngonten rasanya gak afdol!
 
 Konten IKADA diharapkan terasa:
 **Natural, dekat, menghibur, kreatif, spontan, relatable, positif, dan punya cerita.**

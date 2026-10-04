@@ -28,12 +28,10 @@ export default function Manifesto() {
             <span className="text-zinc-500">TAPI YANG BIKIN ORANG INGAT IKADA.</span>
           </h2>
           <p className="text-zinc-700 dark:text-zinc-300 text-base leading-relaxed mb-4">
-            IKADA bukan sekadar kumpul-kumpul bikin video tanpa arah. Kita mengubah obrolan, interaksi, dan energi 
-            tongkrongan yang sudah ada menjadi karya yang konsisten, berkarakter, dan bermanfaat buat penonton.
+            Bagi kita di IKADA, fokus utamanya sederhana: <strong className="text-zinc-900 dark:text-white font-bold">menghibur</strong> sekaligus menjadi <strong className="text-zinc-900 dark:text-white font-bold">wadah untuk kawan-kawan berkembang dan menemukan potensi terbaik dirinya</strong>. 
           </p>
           <p className="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed">
-            Kita nggak harus ikut semua tren TikTok/Reels yang lewat. Tren boleh dipakai kalau pas sama karakter kita. 
-            Fokus nomor satu kita adalah: <strong className="text-zinc-900 dark:text-white font-bold">konsisten membangun identitas</strong>.
+            Jaman sekarang kalau nongkrong gak ngonten rasanya gak afdol! Dari interaksi yang seru dan natural, kita ubah momen tongkrongan jadi konten yang bikin orang ketawa dan betah nonton, sambil mengasah bakat setiap orang di balik maupun di depan kamera.
           </p>
         </div>
 

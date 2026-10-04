@@ -49,12 +49,17 @@ export default function Header() {
           </span>
         </h1>
 
-        <p className="max-w-2xl mx-auto text-base sm:text-lg text-zinc-700 dark:text-zinc-300 leading-relaxed mb-8">
-          Panggung karya dan wadah solidaritas keluarga besar 
-          <span className="text-zinc-900 dark:text-white font-semibold"> IKADA</span>. 
-          Di sini kita satukan energi, saling jaga dan saling topang di setiap proses: 
-          dari obrolan santai di tongkrongan hingga melahirkan karya nyata yang kita banggakan bersama!
+        <p className="max-w-2xl mx-auto text-base sm:text-lg text-zinc-700 dark:text-zinc-300 leading-relaxed mb-6 font-normal">
+          Fokus utama kita simpel: <strong className="text-zinc-900 dark:text-white font-semibold">menghibur</strong> dan jadi wadah seru buat anak-anak <span className="text-zinc-900 dark:text-ikada-volt font-bold">IKADA</span> berkembang nemuin potensi dirinya. Jaman sekarang kalau nongkrong gak ngonten rasanya gak afdol—dari obrolan santai, kita bikin karya bareng yang pecah!
         </p>
+
+        {/* Tongkrongan Punchline Pill */}
+        <div className="inline-flex items-center gap-2 bg-zinc-100 dark:bg-ikada-surface border border-zinc-300 dark:border-zinc-700/80 px-4 py-1.5 text-xs font-mono text-zinc-700 dark:text-zinc-300 mb-8 shadow-sm">
+          <span>⚡</span>
+          <span className="italic">“Jaman sekarang kalau gak ngonten rasanya gak afdol!”</span>
+          <span className="text-zinc-400 dark:text-zinc-600">//</span>
+          <span className="text-zinc-900 dark:text-ikada-volt font-bold">#BerkembangBareng</span>
+        </div>
 
         {/* Action CTAs */}
         <div className="flex flex-wrap items-center justify-center gap-4">
