@@ -50,9 +50,10 @@ export default function Header() {
         </h1>
 
         <p className="max-w-2xl mx-auto text-base sm:text-lg text-zinc-700 dark:text-zinc-300 leading-relaxed mb-8">
-          Bukan website korporat kaku, bukan portal bisnis. Ini adalah panduan lengkap inisiasi 
-          <span className="text-zinc-900 dark:text-white font-semibold"> Project Konten IKADA</span> agar kita satu frekuensi: 
-          dari konsep, divisi, shooting, alat, editing, hingga publishing.
+          Panggung karya dan wadah solidaritas keluarga besar 
+          <span className="text-zinc-900 dark:text-white font-semibold"> IKADA</span>. 
+          Di sini kita satukan energi, saling jaga dan saling topang di setiap proses: 
+          dari obrolan santai di tongkrongan hingga melahirkan karya nyata yang kita banggakan bersama!
         </p>
 
         {/* Action CTAs */}
