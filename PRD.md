@@ -28,7 +28,7 @@ IKADA adalah project konten berbasis tongkrongan yang mengangkat kehidupan sehar
 
 Project ini dibangun dari aktivitas dan interaksi nyata di tongkrongan, lalu dikembangkan menjadi konten yang bisa dinikmati lebih luas.
 
-Fokus utama IKADA adalah **menghibur dan menjadi wadah bagi anak-anak IKADA untuk berkembang serta menemukan potensi terbaik dirinya**. Jaman sekarang kalau cuma nongkrong tanpa ngonten rasanya gak afdol!
+Fokus utama IKADA adalah **menghadirkan hiburan yang bermakna dan menjadi wadah bagi kawan-kawan IKADA untuk berkembang serta menemukan potensi terbaik dirinya**. Lewat karya bersama, kita buktikan energi positif tongkrongan bisa menghasilkan karya yang membanggakan.
 
 Konten IKADA diharapkan terasa:
 **Natural, dekat, menghibur, kreatif, spontan, relatable, positif, dan punya cerita.**

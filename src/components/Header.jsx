@@ -50,15 +50,15 @@ export default function Header() {
         </h1>
 
         <p className="max-w-2xl mx-auto text-base sm:text-lg text-zinc-700 dark:text-zinc-300 leading-relaxed mb-6 font-normal">
-          Fokus utama kita simpel: <strong className="text-zinc-900 dark:text-white font-semibold">menghibur</strong> dan jadi wadah seru buat anak-anak <span className="text-zinc-900 dark:text-ikada-volt font-bold">IKADA</span> berkembang nemuin potensi dirinya. Jaman sekarang kalau nongkrong gak ngonten rasanya gak afdol—dari obrolan santai, kita bikin karya bareng yang pecah!
+          Saatnya tongkrongan kita melangkah lebih jauh. Lewat konten yang menghibur, <span className="text-zinc-900 dark:text-white font-bold">IKADA</span> hadir jadi ruang bagi kita semua untuk bereksplorasi, mengasah bakat, dan menemukan potensi terbaik diri kita. Bersama-sama, kita buktikan energi positif anak muda bisa melahirkan karya yang luar biasa!
         </p>
 
         {/* Tongkrongan Punchline Pill */}
         <div className="inline-flex items-center gap-2 bg-zinc-100 dark:bg-ikada-surface border border-zinc-300 dark:border-zinc-700/80 px-4 py-1.5 text-xs font-mono text-zinc-700 dark:text-zinc-300 mb-8 shadow-sm">
-          <span>⚡</span>
-          <span className="italic">“Jaman sekarang kalau gak ngonten rasanya gak afdol!”</span>
+          <span>🔥</span>
+          <span className="font-semibold text-zinc-900 dark:text-white">Nongkrong Bareng, Tumbuh Bareng</span>
           <span className="text-zinc-400 dark:text-zinc-600">//</span>
-          <span className="text-zinc-900 dark:text-ikada-volt font-bold">#BerkembangBareng</span>
+          <span className="text-zinc-900 dark:text-ikada-volt font-bold">#KaryaAnakIKADA</span>
         </div>
 
         {/* Action CTAs */}

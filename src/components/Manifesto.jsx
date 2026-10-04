@@ -28,10 +28,10 @@ export default function Manifesto() {
             <span className="text-zinc-500">TAPI YANG BIKIN ORANG INGAT IKADA.</span>
           </h2>
           <p className="text-zinc-700 dark:text-zinc-300 text-base leading-relaxed mb-4">
-            Bagi kita di IKADA, fokus utamanya sederhana: <strong className="text-zinc-900 dark:text-white font-bold">menghibur</strong> sekaligus menjadi <strong className="text-zinc-900 dark:text-white font-bold">wadah untuk kawan-kawan berkembang dan menemukan potensi terbaik dirinya</strong>. 
+            Bagi kita di IKADA, tujuan besarnya adalah <strong className="text-zinc-900 dark:text-white font-bold">menghadirkan hiburan yang bermakna</strong> sekaligus menjadi <strong className="text-zinc-900 dark:text-white font-bold">ruang bertumbuh buat kawan-kawan menemukan potensi terbaiknya</strong>.
           </p>
           <p className="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed">
-            Jaman sekarang kalau nongkrong gak ngonten rasanya gak afdol! Dari interaksi yang seru dan natural, kita ubah momen tongkrongan jadi konten yang bikin orang ketawa dan betah nonton, sambil mengasah bakat setiap orang di balik maupun di depan kamera.
+            Kita percaya setiap anak di tongkrongan punya keunikan dan bakatnya masing-masing. Lewat proses bikin konten bareng—mulai dari ide, teknis kamera, peran di depan lensa, hingga editing—kita belajar, saling dukung, dan membuktikan bahwa karya yang lahir dari rasa kebersamaan selalu punya daya pikat tersendiri.
           </p>
         </div>
 
