@@ -152,18 +152,23 @@ export default function CrewSection() {
               Anggota Tim ({selectedDiv.members.length} Orang):
             </span>
             <div className="flex flex-wrap gap-2">
-              {selectedDiv.members.map((member, i) => (
-                <span
-                  key={i}
-                  className={`px-3 py-1 font-mono text-xs border ${
-                    member === selectedDiv.coordinator
-                      ? 'bg-zinc-900 text-white dark:bg-zinc-800 dark:text-ikada-volt border-black dark:border-ikada-volt font-bold'
-                      : 'bg-zinc-100 text-zinc-700 dark:bg-ikada-panel dark:text-zinc-300 border-zinc-300 dark:border-zinc-700'
-                  }`}
-                >
-                  {member} {member === selectedDiv.coordinator && '(Koord)'}
-                </span>
-              ))}
+              {selectedDiv.members.map((member, i) => {
+                const isKoord = member === selectedDiv.coordinator || selectedDiv.coordinator.startsWith(member);
+                const isSementara = selectedDiv.coordinator.includes('Sementara');
+
+                return (
+                  <span
+                    key={i}
+                    className={`px-3 py-1 font-mono text-xs border ${
+                      isKoord
+                        ? 'bg-zinc-900 text-white dark:bg-zinc-800 dark:text-ikada-volt border-black dark:border-ikada-volt font-bold'
+                        : 'bg-zinc-100 text-zinc-700 dark:bg-ikada-panel dark:text-zinc-300 border-zinc-300 dark:border-zinc-700'
+                    }`}
+                  >
+                    {member} {isKoord && (isSementara ? '(Koord Sementara)' : '(Koord)')}
+                  </span>
+                );
+              })}
             </div>
             {selectedDiv.note && (
               <p className="text-[11px] font-mono text-amber-800 dark:text-ikada-amber mt-2.5 bg-amber-50 dark:bg-ikada-amber/10 border border-amber-300 dark:border-ikada-amber/30 p-2">

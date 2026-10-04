@@ -15,7 +15,7 @@ Repositori ini memuat dokumentasi resmi serta portal web informasi untuk **Proje
 - **Production — Shooting / Recording**: Paris *(Anggota: Azzam, Latief, Paris)*
 - **Production — Peralatan / Operasional**: Teo *(Anggota: Danil, Solay, Paris)*
 - **Editing**: Bagor *(Anggota: Asyabi, Bagor, Hasan, Latief)*
-- **Talent**: Dea *(Anggota: Fathur, Fahmi, Ilyas, Rizal, Teo, Andra, Fawwaz, Dea)*
+- **Talent**: Atria (Sementara) *(Anggota: Atria, Fathur, Fahmi, Ilyas, Rizal, Teo, Andra, Fawwaz, Dea, Ninda, Vanessa, Tasya)*
 - **Publishing**: Hasan *(Anggota: Bagor, Fathur, Hasan)*
 
 ---

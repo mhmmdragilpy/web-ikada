@@ -88,7 +88,7 @@ graph TD
         end
         
         ED["✂️ EDITING<br/>Koord: Bagor<br/>(Asyabi, Bagor, Hasan, Latief)"]
-        TL["🎭 TALENT<br/>Koord: Dea<br/>(Fathur, Fahmi, Ilyas, Rizal, Teo, Andra, Fawwaz, Dea)"]
+        TL["🎭 TALENT<br/>Koord: Atria (Sementara)<br/>(Atria, Fathur, Fahmi, Ilyas, Rizal, Teo, Andra, Fawwaz, Dea, Ninda, Vanessa, Tasya)"]
         PB["📱 PUBLISHING<br/>Koord: Hasan<br/>(Bagor, Fathur, Hasan)"]
     end
 
@@ -184,8 +184,8 @@ Editing tidak boleh mengubah makna atau konteks secara menyesatkan.
 
 ## 9. TALENT
 
-- **Koordinator:** Dea
-- **Anggota:** Fathur, Fahmi, Ilyas, Rizal, Teo, Andra, Fawwaz, Dea
+- **Koordinator:** Atria (Sementara) *(sebelumnya Dea)*
+- **Anggota:** Atria, Fathur, Fahmi, Ilyas, Rizal, Teo, Andra, Fawwaz, Dea, Ninda, Vanessa, Tasya
 
 ### Fokus
 Membawa cerita dan karakter IKADA ke depan kamera.
@@ -195,7 +195,10 @@ Memahami konsep, hadir sesuai jadwal, mengikuti arahan, menjaga energi shooting,
 
 Karakter setiap orang bisa menjadi kekuatan konten: serius, lucu, spontan, kompetitif, santai, kritis, dan sebagainya. Talent tetap mengikuti kebutuhan cerita serta arahan produksi.
 
-> **Catatan:** Teo saat ini memiliki peran di **Talent** sekaligus menjadi **Koordinator Peralatan Production**.
+> **Catatan:**
+> - Koordinator Talent saat ini dipegang sementara oleh **Atria** (yang juga memimpin divisi Creative).
+> - Tambahan anggota talent baru: **Ninda**, **Vanessa**, **Tasya**.
+> - **Teo** saat ini memiliki peran aktif di **Talent** sekaligus menjadi **Koordinator Peralatan Production**.
 
 ---
 
@@ -236,7 +239,7 @@ Om Pren — Aa Bayu — Om Anek
         │   Koordinator: Bagor
         │
         ├── TALENT
-        │   Koordinator: Dea
+        │   Koordinator: Atria (Sementara)
         │
         └── PUBLISHING
             Koordinator: Hasan
