@@ -26,16 +26,17 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-ikada-bg/90 dark:bg-ikada-bg/90 light:bg-ikada-light-bg/90 backdrop-blur-md border-b border-ikada-border dark:border-ikada-border light:border-ikada-light-border transition-colors">
+    <nav className="sticky top-0 z-50 bg-white/95 dark:bg-[#0c0d12]/95 backdrop-blur-md border-b border-zinc-200 dark:border-ikada-border shadow-sm dark:shadow-none transition-colors">
       <div className="max-w-6xl mx-auto px-4 md:px-8 h-14 flex items-center justify-between">
+        {/* Brand */}
         <a href="#" className="flex items-center gap-2 font-display font-black text-lg tracking-wider text-zinc-900 dark:text-white">
           <span className="bg-ikada-volt text-black px-1.5 py-0.5 text-xs font-mono font-bold shadow-sm">IKD</span>
           <span>IKADA</span>
-          <span className="text-zinc-500 text-xs font-mono font-normal">// KONTEN</span>
+          <span className="text-zinc-500 dark:text-zinc-400 text-xs font-mono font-normal">// KONTEN</span>
         </a>
 
         {/* Desktop Links */}
-        <div className="hidden lg:flex items-center gap-6 font-display font-semibold text-xs tracking-wider uppercase text-zinc-600 dark:text-zinc-300">
+        <div className="hidden lg:flex items-center gap-6 font-display font-semibold text-xs tracking-wider uppercase text-zinc-700 dark:text-zinc-300">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -53,7 +54,7 @@ export default function Navigation() {
           <button
             onClick={toggleTheme}
             aria-label="Toggle Dark and Light Mode"
-            className="p-2 border rounded-none flex items-center gap-1.5 text-xs font-mono transition-all border-zinc-300 dark:border-zinc-700 bg-white dark:bg-ikada-panel text-zinc-800 dark:text-zinc-200 hover:border-ikada-volt active:scale-95"
+            className="p-2 border rounded-none flex items-center gap-1.5 text-xs font-mono transition-all border-zinc-300 dark:border-zinc-700 bg-zinc-100 hover:bg-zinc-200 dark:bg-ikada-panel dark:hover:bg-zinc-800 text-zinc-800 dark:text-zinc-200 hover:border-black dark:hover:border-ikada-volt active:scale-95"
             title={theme === 'dark' ? 'Ganti ke Mode Terang' : 'Ganti ke Mode Gelap'}
           >
             {theme === 'dark' ? (
@@ -72,7 +73,7 @@ export default function Navigation() {
           {/* Gaskeun Celebration Button */}
           <button
             onClick={triggerGaskeun}
-            className="hidden sm:flex items-center gap-1.5 bg-ikada-amber hover:bg-orange-500 text-white font-mono font-bold text-xs px-3.5 py-1.5 uppercase tracking-wider transition-all shadow-brutal-card active:translate-x-1 active:translate-y-1"
+            className="hidden sm:flex items-center gap-1.5 bg-ikada-amber hover:bg-orange-600 text-white font-mono font-bold text-xs px-3.5 py-1.5 uppercase tracking-wider transition-all shadow-sm active:translate-x-0.5 active:translate-y-0.5"
             title="Klik buat bakar semangat tim!"
           >
             <Flame className="w-3.5 h-3.5" />
@@ -82,7 +83,7 @@ export default function Navigation() {
           {/* Mobile Hamburger */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white"
+            className="lg:hidden p-2 text-zinc-700 dark:text-zinc-400 hover:text-black dark:hover:text-white"
             aria-label="Toggle Menu"
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -92,13 +93,13 @@ export default function Navigation() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white dark:bg-ikada-surface border-b border-zinc-200 dark:border-ikada-border px-4 py-4 space-y-2 animate-in slide-in-from-top-2 duration-150">
+        <div className="lg:hidden bg-white dark:bg-ikada-surface border-b border-zinc-200 dark:border-ikada-border px-4 py-4 space-y-2 animate-in slide-in-from-top-2 duration-150 shadow-md">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={() => setMobileMenuOpen(false)}
-              className="block text-zinc-800 dark:text-zinc-300 hover:text-black dark:hover:text-ikada-volt font-display font-semibold text-sm uppercase py-2.5 border-b border-zinc-200 dark:border-zinc-800/60"
+              className="block text-zinc-800 dark:text-zinc-300 hover:text-black dark:hover:text-ikada-volt font-display font-semibold text-sm uppercase py-2.5 border-b border-zinc-100 dark:border-zinc-800/60"
             >
               {link.label}
             </a>

@@ -19,7 +19,7 @@ export const PRD_DATA = {
       members: ["Ragil", "Said", "Atria"],
       focus: "Menentukan APA yang akan dibuat",
       principle: "Arah cerita harus jelas sebelum turun ke lapangan.",
-      tagColor: "border-amber-500/60 text-amber-400 bg-amber-500/10",
+      tagColor: "border-amber-600 dark:border-amber-500/60 text-amber-900 dark:text-amber-400 bg-amber-50 dark:bg-amber-500/10",
       accent: "#f59e0b",
       responsibilities: [
         "Mencari & mengembangkan ide",
@@ -38,7 +38,7 @@ export const PRD_DATA = {
       members: ["Azzam", "Latief", "Paris"],
       focus: "Mengubah konsep menjadi FOOTAGE berkualitas",
       principle: "Konsep sudah jelas, footage harus cukup.",
-      tagColor: "border-ikada-volt/60 text-ikada-volt bg-ikada-volt/10",
+      tagColor: "border-zinc-900 dark:border-ikada-volt/60 text-zinc-950 dark:text-ikada-volt bg-zinc-200 dark:bg-ikada-volt/10 font-bold",
       accent: "#e2f952",
       responsibilities: [
         "Persiapan shooting & camera setup",
@@ -57,7 +57,7 @@ export const PRD_DATA = {
       members: ["Danil", "Solay", "Paris"],
       focus: "Memastikan seluruh PERALATAN siap tempur",
       principle: "Sebelum talent siap, alat harus sudah siap.",
-      tagColor: "border-cyan-400/60 text-cyan-400 bg-cyan-400/10",
+      tagColor: "border-cyan-600 dark:border-cyan-400/60 text-cyan-900 dark:text-cyan-400 bg-cyan-50 dark:bg-cyan-400/10",
       accent: "#00e5ff",
       responsibilities: [
         "Cek kamera, baterai terisi penuh & memory card",
@@ -76,7 +76,7 @@ export const PRD_DATA = {
       members: ["Asyabi", "Bagor", "Hasan", "Latief"],
       focus: "Mengubah footage mentah jadi video ENAK DITONTON",
       principle: "Editing tidak boleh mengubah makna atau konteks secara menyesatkan.",
-      tagColor: "border-purple-400/60 text-purple-400 bg-purple-400/10",
+      tagColor: "border-purple-600 dark:border-purple-400/60 text-purple-900 dark:text-purple-400 bg-purple-50 dark:bg-purple-400/10",
       accent: "#c084fc",
       responsibilities: [
         "Seleksi footage & rough cut",
@@ -96,7 +96,7 @@ export const PRD_DATA = {
       focus: "Membawa karakter & cerita IKADA ke depan kamera",
       principle: "Tampil natural, jaga energi, dan berani berinteraksi.",
       note: "Teo memiliki peran aktif sebagai Talent sekaligus Koordinator Peralatan Production.",
-      tagColor: "border-pink-500/60 text-pink-400 bg-pink-500/10",
+      tagColor: "border-pink-600 dark:border-pink-500/60 text-pink-900 dark:text-pink-400 bg-pink-50 dark:bg-pink-500/10",
       accent: "#ec4899",
       responsibilities: [
         "Memahami konsep & alur sebelum take",
@@ -115,7 +115,7 @@ export const PRD_DATA = {
       members: ["Bagor", "Fathur", "Hasan"],
       focus: "Memastikan konten SAMPAI dan TERDENGAR oleh audience",
       principle: "Publishing bukan sekadar upload. Konten → Penonton → Data → Evaluasi → Ide berikutnya.",
-      tagColor: "border-emerald-400/60 text-emerald-400 bg-emerald-400/10",
+      tagColor: "border-emerald-600 dark:border-emerald-400/60 text-emerald-900 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-400/10",
       accent: "#34d399",
       responsibilities: [
         "Quality check terakhir sebelum upload",
