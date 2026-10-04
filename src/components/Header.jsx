@@ -1,38 +1,14 @@
 import React from 'react';
-import { Video, Disc, BatteryMedium, Sliders, ChevronDown } from 'lucide-react';
+import { Video, Disc, Sliders, ChevronDown } from 'lucide-react';
 
 export default function Header() {
   return (
-    <header className="relative pt-6 pb-16 px-4 md:px-8 border-b border-zinc-200 dark:border-ikada-border halftone-dots overflow-hidden transition-colors">
+    <header className="relative pt-12 pb-16 px-4 md:px-8 border-b border-zinc-200 dark:border-ikada-border halftone-dots overflow-hidden transition-colors">
       {/* Camcorder Viewfinder Framing Corners */}
       <div className="absolute top-4 left-4 w-6 h-6 border-t-2 border-l-2 border-zinc-800 dark:border-ikada-volt pointer-events-none" />
       <div className="absolute top-4 right-4 w-6 h-6 border-t-2 border-r-2 border-zinc-800 dark:border-ikada-volt pointer-events-none" />
       <div className="absolute bottom-4 left-4 w-6 h-6 border-b-2 border-l-2 border-zinc-800 dark:border-ikada-volt pointer-events-none" />
       <div className="absolute bottom-4 right-4 w-6 h-6 border-b-2 border-r-2 border-zinc-800 dark:border-ikada-volt pointer-events-none" />
-
-      {/* Camcorder Status Bar */}
-      <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-between text-xs font-mono text-zinc-600 dark:text-zinc-400 gap-3 mb-10 pb-3 border-b border-zinc-200 dark:border-zinc-800">
-        <div className="flex items-center gap-2">
-          <span className="flex h-3 w-3 relative">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-ikada-amber opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-3 w-3 bg-ikada-amber"></span>
-          </span>
-          <span className="font-bold text-zinc-900 dark:text-white tracking-widest">● REC</span>
-          <span className="text-zinc-400 dark:text-zinc-600">|</span>
-          <span className="text-zinc-900 dark:text-ikada-volt font-bold">00:24:19</span>
-          <span className="hidden sm:inline text-zinc-400 dark:text-zinc-600">|</span>
-          <span className="hidden sm:inline">4K // 60FPS</span>
-        </div>
-
-        <div className="flex items-center gap-4 text-zinc-700 dark:text-zinc-300">
-          <span className="hidden md:inline">ISO 800</span>
-          <span className="hidden md:inline">F/2.8</span>
-          <div className="flex items-center gap-1.5 text-zinc-900 dark:text-ikada-volt bg-zinc-100 dark:bg-ikada-surface px-2.5 py-1 rounded-none border border-zinc-300 dark:border-ikada-border">
-            <BatteryMedium className="w-4 h-4 text-ikada-amber dark:text-ikada-volt" />
-            <span className="font-bold text-[11px]">88% READY</span>
-          </div>
-        </div>
-      </div>
 
       {/* Hero Body */}
       <div className="max-w-5xl mx-auto text-center relative z-10">
