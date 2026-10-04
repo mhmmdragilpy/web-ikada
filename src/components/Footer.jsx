@@ -2,11 +2,13 @@ import React from 'react';
 import { Heart, ArrowUp } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { useTheme } from '../context/ThemeContext';
+import { playGaskeunSound } from '../utils/soundEffects';
 
 export default function Footer() {
   const { theme } = useTheme();
 
   const triggerConfetti = () => {
+    playGaskeunSound();
     confetti({
       particleCount: 150,
       spread: 90,

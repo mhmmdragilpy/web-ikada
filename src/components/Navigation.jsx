@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import confetti from 'canvas-confetti';
 import { Flame, Menu, X, Sun, Moon } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
+import { playGaskeunSound } from '../utils/soundEffects';
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
 
   const triggerGaskeun = () => {
+    playGaskeunSound();
     confetti({
       particleCount: 120,
       spread: 70,

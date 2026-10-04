@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
+import { playThemeSound } from '../utils/soundEffects';
 
 const ThemeContext = createContext();
 
@@ -22,7 +23,11 @@ export function ThemeProvider({ children }) {
   }, [theme]);
 
   const toggleTheme = () => {
-    setTheme(prev => (prev === 'dark' ? 'light' : 'dark'));
+    setTheme(prev => {
+      const nextTheme = prev === 'dark' ? 'light' : 'dark';
+      playThemeSound(nextTheme);
+      return nextTheme;
+    });
   };
 
   return (
