@@ -1,8 +1,10 @@
-# 🎬 IKADA — Project Konten Tongkrongan
+<div align="center">
+  <img src="./public/ikada-dark.png" width="120" alt="Logo Resmi IKADA" />
+  <h1>IKADA — Project Konten Tongkrongan</h1>
+  <p><strong>“Dari tongkrongan, jadi cerita. Dari cerita, jadi konten. Dari konten, jadi karya.”</strong></p>
+</div>
 
-> **“Dari tongkrongan, jadi cerita. Dari cerita, jadi konten. Dari konten, jadi karya.”**
-
-Repositori ini memuat dokumentasi resmi serta portal web informasi untuk **Project Konten IKADA**, inisiatif kreatif berbasis tongkrongan yang mengangkat keseharian, olahraga, humor, masyarakat, dan kebersamaan menjadi konten bermakna.
+Repositori ini memuat dokumentasi resmi serta portal web informasi untuk **Project Konten IKADA**, inisiatif kreatif berbasis tongkrongan yang mengangkat keseharian, olahraga, humor, masyarakat, dan kebersamaan menjadi konten bermakna. Dilengkapi dukungan Open Graph Protocol, adaptasi visual Dark/Light Mode, dan panduan komprehensif 6 divisi.
 
 ---
 

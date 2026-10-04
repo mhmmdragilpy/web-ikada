@@ -29,10 +29,27 @@ export default function Navigation() {
     <nav className="sticky top-0 z-50 bg-white/95 dark:bg-[#0c0d12]/95 backdrop-blur-md border-b border-zinc-200 dark:border-ikada-border shadow-sm dark:shadow-none transition-colors">
       <div className="max-w-6xl mx-auto px-4 md:px-8 h-14 flex items-center justify-between">
         {/* Brand */}
-        <a href="#" className="flex items-center gap-2 font-display font-black text-lg tracking-wider text-zinc-900 dark:text-white">
-          <span className="bg-ikada-volt text-black px-1.5 py-0.5 text-xs font-mono font-bold shadow-sm">IKD</span>
-          <span>IKADA</span>
-          <span className="text-zinc-500 dark:text-zinc-400 text-xs font-mono font-normal">// KONTEN</span>
+        <a href="#" className="flex items-center gap-2.5 group">
+          <div className="w-8 h-8 p-0.5 bg-white dark:bg-black border border-zinc-300 dark:border-zinc-700 shadow-sm flex items-center justify-center overflow-hidden transition-transform group-hover:scale-105 shrink-0">
+            <img
+              src={theme === 'dark' ? '/ikada-dark.png' : '/ikada-light.png'}
+              alt="Logo IKADA"
+              className="w-full h-full object-contain"
+            />
+          </div>
+          <div className="flex flex-col">
+            <div className="flex items-center gap-1.5 leading-none">
+              <span className="font-display font-black text-base sm:text-lg tracking-wider text-zinc-900 dark:text-white group-hover:text-ikada-amber dark:group-hover:text-ikada-volt transition-colors">
+                IKADA
+              </span>
+              <span className="text-[10px] font-mono text-zinc-500 dark:text-zinc-400 font-normal">
+                // KONTEN
+              </span>
+            </div>
+            <span className="text-[9px] font-mono text-zinc-500 dark:text-zinc-400 tracking-wider">
+              TONGKRONGAN CREW
+            </span>
+          </div>
         </a>
 
         {/* Desktop Links */}

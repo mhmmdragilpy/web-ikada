@@ -1,8 +1,11 @@
 import React from 'react';
-import { Clapperboard, Heart, ArrowUp } from 'lucide-react';
+import { Heart, ArrowUp } from 'lucide-react';
 import confetti from 'canvas-confetti';
+import { useTheme } from '../context/ThemeContext';
 
 export default function Footer() {
+  const { theme } = useTheme();
+
   const triggerConfetti = () => {
     confetti({
       particleCount: 150,
@@ -19,9 +22,13 @@ export default function Footer() {
   return (
     <footer className="pt-16 pb-12 px-4 md:px-8 border-t border-zinc-200 dark:border-ikada-border bg-white dark:bg-ikada-bg halftone-dots transition-colors">
       <div className="max-w-5xl mx-auto text-center">
-        {/* Clapperboard closing */}
-        <div className="inline-flex p-3 bg-zinc-100 dark:bg-ikada-surface border border-zinc-300 dark:border-ikada-border text-zinc-900 dark:text-ikada-volt mb-6 shadow-sm">
-          <Clapperboard className="w-8 h-8" />
+        {/* Official Logo Mark */}
+        <div className="inline-flex p-2 bg-white dark:bg-black border-2 border-zinc-900 dark:border-ikada-volt shadow-brutal-black dark:shadow-brutal-card mb-6 transition-transform hover:scale-105">
+          <img
+            src={theme === 'dark' ? '/ikada-dark.png' : '/ikada-light.png'}
+            alt="Logo IKADA"
+            className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
+          />
         </div>
 
         <h2 className="font-display font-black text-2xl sm:text-4xl md:text-5xl uppercase tracking-tight text-zinc-900 dark:text-white mb-6 leading-tight">
@@ -55,7 +62,12 @@ export default function Footer() {
 
         {/* Metadata Footer */}
         <div className="pt-8 border-t border-zinc-200 dark:border-zinc-800 flex flex-col sm:flex-row items-center justify-between text-xs font-mono text-zinc-500 gap-4">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2.5">
+            <img
+              src={theme === 'dark' ? '/ikada-dark.png' : '/ikada-light.png'}
+              alt="Logo IKADA"
+              className="w-5 h-5 object-contain border border-zinc-300 dark:border-zinc-700"
+            />
             <span className="text-zinc-900 dark:text-ikada-volt font-bold">IKADA</span>
             <span>// Project Information &amp; Internal Guidelines</span>
           </div>

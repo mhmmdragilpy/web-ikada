@@ -1,7 +1,10 @@
 import React from 'react';
 import { Video, Disc, Sliders, ChevronDown } from 'lucide-react';
+import { useTheme } from '../context/ThemeContext';
 
 export default function Header() {
+  const { theme } = useTheme();
+
   return (
     <header className="relative pt-12 pb-16 px-4 md:px-8 border-b border-zinc-200 dark:border-ikada-border halftone-dots overflow-hidden transition-colors">
       {/* Camcorder Viewfinder Framing Corners */}
@@ -12,10 +15,25 @@ export default function Header() {
 
       {/* Hero Body */}
       <div className="max-w-5xl mx-auto text-center relative z-10">
-        {/* Street Stencil Badge */}
-        <div className="inline-flex items-center gap-2 bg-ikada-volt text-black font-mono font-bold text-xs uppercase px-3 py-1 mb-6 rotate-[-1deg] shadow-brutal-black dark:shadow-brutal-white tracking-wider">
-          <Disc className="w-3.5 h-3.5 animate-spin" />
-          <span>PROJECT INFORMATION // IKADA KONTEN CREW</span>
+        {/* Brand Insignia & Stencil Badge */}
+        <div className="flex flex-col items-center justify-center mb-6">
+          <div className="relative group mb-3">
+            <div className="w-20 h-20 sm:w-24 sm:h-24 p-2 bg-white dark:bg-black border-2 border-zinc-900 dark:border-ikada-volt shadow-brutal-black dark:shadow-brutal-card transition-all duration-300 group-hover:rotate-[-2deg] group-hover:scale-105">
+              <img
+                src={theme === 'dark' ? '/ikada-dark.png' : '/ikada-light.png'}
+                alt="Logo Resmi IKADA"
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <span className="absolute -bottom-2 -right-2 bg-ikada-volt text-black font-mono font-black text-[9px] px-1.5 py-0.5 border border-black uppercase tracking-wider shadow-sm">
+              OFFICIAL
+            </span>
+          </div>
+
+          <div className="inline-flex items-center gap-2 bg-ikada-volt text-black font-mono font-bold text-xs uppercase px-3 py-1 rotate-[-1deg] shadow-brutal-black dark:shadow-brutal-white tracking-wider">
+            <Disc className="w-3.5 h-3.5 animate-spin" />
+            <span>PROJECT INFORMATION // IKADA KONTEN CREW</span>
+          </div>
         </div>
 
         <h1 className="font-display font-black text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tighter uppercase leading-[0.95] mb-6 text-zinc-900 dark:text-white">
