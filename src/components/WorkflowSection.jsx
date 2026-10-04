@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { GitCommit, ArrowRight, Play, CheckSquare, RefreshCw } from 'lucide-react';
 import { PRD_DATA } from '../data/prdData';
+import { playStepSound } from '../utils/soundEffects';
 
 export default function WorkflowSection() {
   const [activeStep, setActiveStep] = useState(0);
@@ -55,7 +56,10 @@ export default function WorkflowSection() {
             return (
               <button
                 key={idx}
-                onClick={() => setActiveStep(idx)}
+                onClick={() => {
+                  playStepSound(idx);
+                  setActiveStep(idx);
+                }}
                 className={`p-2.5 text-center border transition-all duration-150 min-w-[70px] ${
                   isActive
                     ? 'bg-black text-white dark:bg-ikada-volt dark:text-black border-black dark:border-ikada-volt font-bold shadow-sm'
@@ -86,10 +90,17 @@ export default function WorkflowSection() {
             </p>
           </div>
 
-          <div className="flex items-center gap-2 text-xs font-mono text-zinc-500 dark:text-zinc-400 shrink-0">
-            <span>Next: {PRD_DATA.workflow[(activeStep + 1) % PRD_DATA.workflow.length].title}</span>
+          <button
+            onClick={() => {
+              const nextIdx = (activeStep + 1) % PRD_DATA.workflow.length;
+              playStepSound(nextIdx);
+              setActiveStep(nextIdx);
+            }}
+            className="flex items-center gap-2 text-xs font-mono text-zinc-700 dark:text-zinc-300 hover:text-black dark:hover:text-ikada-volt border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-ikada-surface px-3 py-1.5 shrink-0 transition-all active:scale-95 shadow-sm"
+          >
+            <span>Lanjut: {PRD_DATA.workflow[(activeStep + 1) % PRD_DATA.workflow.length].title}</span>
             <ArrowRight className="w-4 h-4 text-zinc-900 dark:text-ikada-volt" />
-          </div>
+          </button>
         </div>
       </div>
 

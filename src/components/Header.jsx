@@ -1,6 +1,7 @@
 import React from 'react';
 import { Video, Disc, Sliders, ChevronDown } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
+import { playClickSound, playTabSound } from '../utils/soundEffects';
 
 export default function Header() {
   const { theme } = useTheme();
@@ -17,8 +18,12 @@ export default function Header() {
       <div className="max-w-5xl mx-auto text-center relative z-10">
         {/* Brand Insignia & Stencil Badge */}
         <div className="flex flex-col items-center justify-center mb-6">
-          <div className="relative group mb-3">
-            <div className="w-20 h-20 sm:w-24 sm:h-24 p-2 bg-white dark:bg-black border-2 border-zinc-900 dark:border-ikada-volt shadow-brutal-black dark:shadow-brutal-card transition-all duration-300 group-hover:rotate-[-2deg] group-hover:scale-105">
+          <button
+            onClick={() => playTabSound()}
+            title="Klik Emblem Resmi IKADA"
+            className="relative group mb-3 cursor-pointer"
+          >
+            <div className="w-20 h-20 sm:w-24 sm:h-24 p-2 bg-white dark:bg-black border-2 border-zinc-900 dark:border-ikada-volt shadow-brutal-black dark:shadow-brutal-card transition-all duration-300 group-hover:rotate-[-2deg] group-hover:scale-105 active:scale-95">
               <img
                 src={theme === 'dark' ? '/ikada-dark.png' : '/ikada-light.png'}
                 alt="Logo Resmi IKADA"
@@ -28,7 +33,7 @@ export default function Header() {
             <span className="absolute -bottom-2 -right-2 bg-ikada-volt text-black font-mono font-black text-[9px] px-1.5 py-0.5 border border-black uppercase tracking-wider shadow-sm">
               OFFICIAL
             </span>
-          </div>
+          </button>
 
           <div className="inline-flex items-center gap-2 bg-ikada-volt text-black font-mono font-bold text-xs uppercase px-3 py-1 rotate-[-1deg] shadow-brutal-black dark:shadow-brutal-white tracking-wider">
             <Disc className="w-3.5 h-3.5 animate-spin" />
@@ -59,6 +64,7 @@ export default function Header() {
         <div className="flex flex-wrap items-center justify-center gap-4">
           <a
             href="#struktur"
+            onClick={() => playClickSound()}
             className="w-full sm:w-auto justify-center bg-ikada-volt text-black font-display font-bold text-sm sm:text-base px-6 py-3.5 uppercase tracking-wider hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all duration-150 shadow-brutal-black dark:shadow-brutal-white flex items-center gap-2"
           >
             <Video className="w-4 h-4" />
@@ -66,6 +72,7 @@ export default function Header() {
           </a>
           <a
             href="#bank-ide"
+            onClick={() => playClickSound()}
             className="w-full sm:w-auto justify-center bg-white dark:bg-ikada-surface border border-zinc-300 dark:border-ikada-border text-zinc-900 dark:text-white font-display font-bold text-sm sm:text-base px-6 py-3.5 uppercase tracking-wider hover:border-black dark:hover:border-ikada-volt transition-all duration-150 flex items-center gap-2"
           >
             <Sliders className="w-4 h-4 text-zinc-900 dark:text-ikada-volt" />
@@ -75,7 +82,11 @@ export default function Header() {
       </div>
 
       <div className="flex justify-center mt-12">
-        <a href="#manifesto" className="text-zinc-400 dark:text-zinc-500 hover:text-black dark:hover:text-ikada-volt transition-colors animate-bounce p-2">
+        <a 
+          href="#manifesto" 
+          onClick={() => playClickSound()}
+          className="text-zinc-400 dark:text-zinc-500 hover:text-black dark:hover:text-ikada-volt transition-colors animate-bounce p-2"
+        >
           <ChevronDown className="w-6 h-6" />
         </a>
       </div>

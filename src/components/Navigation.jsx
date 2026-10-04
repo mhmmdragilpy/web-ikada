@@ -1,21 +1,48 @@
 import React, { useState } from 'react';
 import confetti from 'canvas-confetti';
-import { Flame, Menu, X, Sun, Moon } from 'lucide-react';
+import { Flame, Menu, X, Sun, Moon, Sparkles } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
-import { playGaskeunSound } from '../utils/soundEffects';
+import { playClickSound, playHebohSound } from '../utils/soundEffects';
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [showHypeToast, setShowHypeToast] = useState(false);
   const { theme, toggleTheme } = useTheme();
 
   const triggerGaskeun = () => {
-    playGaskeunSound();
+    playHebohSound();
+    setShowHypeToast(true);
+    setTimeout(() => setShowHypeToast(false), 3000);
+
+    // Wave 1: Center fountain
     confetti({
-      particleCount: 120,
-      spread: 70,
+      particleCount: 100,
+      spread: 80,
       origin: { y: 0.6 },
-      colors: ['#e2f952', '#ff5722', '#ffffff', '#00e5ff']
+      colors: ['#e2f952', '#ff5722', '#ffffff', '#00e5ff', '#ff0055']
     });
+
+    // Wave 2: Left cannon (150ms delay)
+    setTimeout(() => {
+      confetti({
+        particleCount: 60,
+        angle: 60,
+        spread: 55,
+        origin: { x: 0.05, y: 0.7 },
+        colors: ['#e2f952', '#ff5722', '#ffffff']
+      });
+    }, 150);
+
+    // Wave 3: Right cannon (300ms delay)
+    setTimeout(() => {
+      confetti({
+        particleCount: 60,
+        angle: 120,
+        spread: 55,
+        origin: { x: 0.95, y: 0.7 },
+        colors: ['#00e5ff', '#e2f952', '#ff0055']
+      });
+    }, 300);
   };
 
   const navLinks = [
@@ -60,6 +87,7 @@ export default function Navigation() {
             <a
               key={link.href}
               href={link.href}
+              onClick={() => playClickSound()}
               className="hover:text-black dark:hover:text-ikada-volt transition-colors py-1"
             >
               {link.label}
@@ -92,7 +120,7 @@ export default function Navigation() {
           {/* Gaskeun Celebration Button */}
           <button
             onClick={triggerGaskeun}
-            className="hidden sm:flex items-center gap-1.5 bg-ikada-amber hover:bg-orange-600 text-white font-mono font-bold text-xs px-3.5 py-1.5 uppercase tracking-wider transition-all shadow-sm active:translate-x-0.5 active:translate-y-0.5"
+            className="hidden sm:flex items-center gap-1.5 bg-ikada-amber hover:bg-orange-600 text-white font-mono font-bold text-xs px-3.5 py-1.5 uppercase tracking-wider transition-all shadow-sm active:translate-x-0.5 active:translate-y-0.5 hover:scale-105 active:scale-95"
             title="Klik buat bakar semangat tim!"
           >
             <Flame className="w-3.5 h-3.5" />
@@ -101,7 +129,10 @@ export default function Navigation() {
 
           {/* Mobile Hamburger */}
           <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            onClick={() => {
+              playClickSound();
+              setMobileMenuOpen(!mobileMenuOpen);
+            }}
             className="lg:hidden p-2 text-zinc-700 dark:text-zinc-400 hover:text-black dark:hover:text-white"
             aria-label="Toggle Menu"
           >
@@ -110,6 +141,17 @@ export default function Navigation() {
         </div>
       </div>
 
+      {/* HYPE TOAST NOTIFICATION (Heboh banner) */}
+      {showHypeToast && (
+        <div className="fixed top-16 left-1/2 -translate-x-1/2 z-50 animate-in fade-in zoom-in-95 duration-200 pointer-events-none w-[90%] sm:w-auto text-center">
+          <div className="bg-black text-white dark:bg-ikada-volt dark:text-black border-2 border-ikada-amber dark:border-white px-5 py-2.5 font-display font-black text-xs sm:text-sm uppercase tracking-wider shadow-brutal-black dark:shadow-brutal-card flex items-center justify-center gap-2.5">
+            <span className="text-base sm:text-lg animate-bounce">🔥</span>
+            <span>GASKEUN! KONTEN PECAH IKADA MELUNCUR!</span>
+            <span className="text-base sm:text-lg animate-bounce">🚀</span>
+          </div>
+        </div>
+      )}
+
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
         <div className="lg:hidden bg-white dark:bg-ikada-surface border-b border-zinc-200 dark:border-ikada-border px-4 py-4 space-y-2 animate-in slide-in-from-top-2 duration-150 shadow-md">
@@ -117,7 +159,10 @@ export default function Navigation() {
             <a
               key={link.href}
               href={link.href}
-              onClick={() => setMobileMenuOpen(false)}
+              onClick={() => {
+                playClickSound();
+                setMobileMenuOpen(false);
+              }}
               className="block text-zinc-800 dark:text-zinc-300 hover:text-black dark:hover:text-ikada-volt font-display font-semibold text-sm uppercase py-2.5 border-b border-zinc-100 dark:border-zinc-800/60"
             >
               {link.label}
@@ -141,7 +186,7 @@ export default function Navigation() {
                 triggerGaskeun();
                 setMobileMenuOpen(false);
               }}
-              className="w-full flex items-center justify-center gap-2 bg-ikada-amber text-white font-mono font-bold text-xs py-3 uppercase tracking-wider shadow-sm"
+              className="w-full flex items-center justify-center gap-2 bg-ikada-amber text-white font-mono font-bold text-xs py-3 uppercase tracking-wider shadow-sm active:scale-95"
             >
               <Flame className="w-4 h-4" />
               <span>GASKEUN TIM IKADA!</span>

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Lightbulb, Search, Copy, Check, Dices } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { PRD_DATA } from '../data/prdData';
+import { playCopySound, playDiceRollSound, playClickSound } from '../utils/soundEffects';
 
 export default function IdeaBankSection() {
   const [search, setSearch] = useState('');
@@ -19,6 +20,7 @@ export default function IdeaBankSection() {
   });
 
   const handleCopy = (text, index) => {
+    playCopySound();
     navigator.clipboard.writeText(text);
     setCopiedIndex(index);
     setTimeout(() => setCopiedIndex(null), 1800);
@@ -26,6 +28,7 @@ export default function IdeaBankSection() {
 
   const handlePickRandom = () => {
     if (PRD_DATA.ideabank.length === 0) return;
+    playDiceRollSound();
     const randomIndex = Math.floor(Math.random() * PRD_DATA.ideabank.length);
     const chosen = PRD_DATA.ideabank[randomIndex];
     setRandomHighlight(chosen);
@@ -75,8 +78,11 @@ export default function IdeaBankSection() {
               🎯 IDE TERPILIH HARI INI
             </span>
             <button
-              onClick={() => setRandomHighlight(null)}
-              className="text-xs font-mono text-zinc-500 hover:text-black dark:hover:text-white"
+              onClick={() => {
+                playClickSound();
+                setRandomHighlight(null);
+              }}
+              className="text-xs font-mono text-zinc-500 hover:text-black dark:hover:text-white p-1"
             >
               [Tutup]
             </button>
@@ -106,7 +112,10 @@ export default function IdeaBankSection() {
           {tags.map((tag) => (
             <button
               key={tag}
-              onClick={() => setSelectedTag(tag)}
+              onClick={() => {
+                playClickSound();
+                setSelectedTag(tag);
+              }}
               className={`px-3 py-1.5 text-xs font-mono uppercase tracking-wider transition-colors shrink-0 ${
                 selectedTag === tag
                   ? 'bg-black text-white dark:bg-zinc-100 dark:text-black font-bold shadow-sm'

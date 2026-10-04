@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Layers, Shuffle, Sparkles, Trophy, BookOpen, Smile, Zap, Coffee, HeartHandshake, Music, Users } from 'lucide-react';
+import confetti from 'canvas-confetti';
 import { PRD_DATA } from '../data/prdData';
+import { playDiceRollSound, playClickSound } from '../utils/soundEffects';
 
 export default function PillarsSection() {
   const [combo, setCombo] = useState(null);
@@ -20,6 +22,7 @@ export default function PillarsSection() {
   };
 
   const generateCombo = () => {
+    playDiceRollSound();
     const list = PRD_DATA.pillars;
     const p1 = list[Math.floor(Math.random() * list.length)];
     let p2 = list[Math.floor(Math.random() * list.length)];
@@ -37,6 +40,13 @@ export default function PillarsSection() {
       p1: p1.name,
       p2: p2.name,
       desc: sampleIdeas[Math.floor(Math.random() * sampleIdeas.length)]
+    });
+
+    confetti({
+      particleCount: 50,
+      spread: 60,
+      origin: { y: 0.6 },
+      colors: ['#e2f952', '#00e5ff', '#ff5722']
     });
   };
 
@@ -93,8 +103,11 @@ export default function PillarsSection() {
             </div>
           </div>
           <button
-            onClick={() => setCombo(null)}
-            className="text-xs text-zinc-500 hover:text-black dark:hover:text-white font-mono self-end sm:self-center"
+            onClick={() => {
+              playClickSound();
+              setCombo(null);
+            }}
+            className="text-xs text-zinc-500 hover:text-black dark:hover:text-white font-mono self-end sm:self-center p-1"
           >
             [Tutup]
           </button>

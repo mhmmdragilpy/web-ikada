@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Users, Shield, CheckCircle2, ChevronRight, Award, Camera, Wrench, Sparkles, Scissors, UserCheck, Share2 } from 'lucide-react';
 import { PRD_DATA } from '../data/prdData';
+import { playTabSound } from '../utils/soundEffects';
 
 export default function CrewSection() {
   const [selectedDiv, setSelectedDiv] = useState(PRD_DATA.divisions[1]); // default to prod-shooting
@@ -85,7 +86,10 @@ export default function CrewSection() {
             return (
               <button
                 key={div.id}
-                onClick={() => setSelectedDiv(div)}
+                onClick={() => {
+                  playTabSound();
+                  setSelectedDiv(div);
+                }}
                 className={`w-full text-left p-4 border transition-all duration-150 flex items-center justify-between group ${
                   isSelected
                     ? 'bg-white dark:bg-ikada-surface border-zinc-900 dark:border-ikada-volt shadow-brutal-black dark:shadow-brutal-card translate-x-1'
