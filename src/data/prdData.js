@@ -35,7 +35,7 @@ export const PRD_DATA = {
       name: "PRODUCTION — SHOOTING",
       subtitle: "Camera, Framing & Visual Capture",
       coordinator: "Paris",
-      members: ["Azzam", "Latief", "Paris"],
+      members: ["Azzam", "Agoy", "Latief", "Paris"],
       focus: "Mengubah konsep menjadi FOOTAGE berkualitas",
       principle: "Konsep sudah jelas, footage harus cukup.",
       tagColor: "border-zinc-900 dark:border-ikada-volt/60 text-zinc-950 dark:text-ikada-volt bg-zinc-200 dark:bg-ikada-volt/10 font-bold",
